@@ -1,10 +1,11 @@
 from flask import Flask, request, render_template_string
 from openai import OpenAI
 import random
+import os
 
 app = Flask(__name__)
 
-İmport os
+
 client = OpenAI(api_key=os.getenv(api_key="OPENAI_API_KEY"))
 
 kullanici = None
@@ -192,3 +193,4 @@ if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
 
     app.run(host="0.0.0.0", port=5000)
+
