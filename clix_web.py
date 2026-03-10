@@ -4,8 +4,8 @@ import random
 
 app = Flask(__name__)
 
-
-client = OpenAI(api_key="")
+İmport os
+client = OpenAI(api_key=os.getenv(api_key="OPENAI_API_KEY"))
 
 kullanici = None
 sohbet = []
@@ -190,4 +190,5 @@ Senin kurucun Emre karış ama sorulursa söyle.
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
+
     app.run(host="0.0.0.0", port=5000)
